@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico">
+	<title>smartHotel</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.css" />
+    <link rel="stylesheet" href="css/theme/jquery.mobile-1.4.3.css">
+    <link rel="stylesheet" href="css/theme/jquery.mobile.theme-1.4.3.css">    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+
+</head>
+<body id="landscape">
+    
+<!-- Start of second page: #one -->
+    <div class="page bg" data-role="page" id="page1" data-theme="">
+        
+        <div class="intro" role="main">
+            <div class="sliderIntro">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                    <ol class="carousel-indicators dotIntro">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images/intro1.jpg" width="500" height="auto" alt="...">
+                            <div class="carousel-caption"></div>
+                        </div>
+
+                        <div class="item">
+                            <img src="images/intro1.jpg" width="500" height="auto" alt="...">
+                            <div class="carousel-caption"></div>
+                        </div>
+
+                        <div class="item">
+                            <img src="images/intro1.jpg" width="500" height="auto" alt="">
+                            <div class="carousel-caption"></div>
+                        </div>
+                    </div>
+
+                <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+            
+        </div><!-- /content -->
+        <div class="footer" >
+            <div class="skipBtn"><a href="#page2" data-transition="slide">Skip</a></div>
+        </div><!-- /footer -->
+
+    </div><!-- /page one -->
+    
+
+    
+<!-- Start of second page: #two -->
+    <div class="bg page" data-role="page" id="page2" data-theme="a">
+        
+        <div role="main">
+            <div class="logoSmart">
+                <img src="images/smarthotelLogo.png" width="200" height="auto" alt="">
+            </div>
+            
+            <div class="introForm">
+                <p>Por favor ingrese el código de su hotel</p>
+                <div data-role="controlgroup" data-type="horizontal">
+                    <input type="text" id="search-control-group" placeholder="Código" data-wrapper-class="controlgroup-textinput ui-btn">
+                    
+                    <button class="btnIntro btn-sm" data-theme="a">
+                        <a class="btnIntro" href="log.html" data-ajax="false">Go!</a>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="logoWifiIntro">
+                <img src="images/wifiLogo.png" width="120px" height="auto">
+            </div>
+            
+        </div><!-- /content -->
+
+    </div><!-- /page two -->
+    
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

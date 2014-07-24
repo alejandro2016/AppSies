@@ -1,0 +1,307 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico">
+	<title>smartHotel</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.css" />
+    <link rel="stylesheet" href="css/theme/jquery.mobile-1.4.3.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="landscape">
+
+    <div class="page sideNav">
+        <div class="barTitle"><p class="titulo">Nombre de Hotel</p></div>
+        <div id="navPrincipal">
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="hotel.html" data-ajax="false"><span class="fa fa-h-square fa-2x icoBtnPrincipal"></span><p>Info</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="request.html" data-ajax="false"><span class="fa fa-headphones fa-2x icoBtnPrincipal"></span><p>Request</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="tools.html" data-ajax="false"><span class="fa fa-plane fa-2x icoBtnPrincipal"></span><p>Tools</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="remote.html" data-ajax="false"><span class="fa fa-bullseye fa-2x icoBtnPrincipal"></span><p>Remote</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="account.html" data-ajax="false"><span class="fa fa-usd fa-2x icoBtnPrincipal"></span><p>Account</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="settings.html" data-ajax="false"><span class="fa fa-cogs fa-2x icoBtnPrincipal"></span><p>Settings</p></a>
+                </button>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="infoUser" class="area">
+            <p class="txt">Welcome</p>
+            <button class="btnCheckIn">
+                <span class="checkIn">Check In</span>
+            </button>
+        </div>
+        <div class="brand"><img src="images/wifiLogo.png" alt="Wifi" height="22px" width="auto"></div>
+    </div>
+    
+<!-- Start of second page: #page1 -->
+    <div class="mainContenido page" data-role="page" id="amallaves" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div id="info">
+                <h5 id="titulosContenido">Ama de llaves</h5>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+            </div>
+        </div>
+    </div><!-- /page two -->
+    
+<!-- Start of second page: #page1 -->
+    <div class="mainContenido page" data-role="page" id="lavanderia" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div class="container">
+            <form  role="form">
+                <div class="form-group">
+                    <label class="labelTxt" for="exampleInputEmail1">Pantalones</label>
+                    <select class="form-control input-sm">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="labelTxt" for="exampleInputEmail1">Camisa</label>
+                    <select class="form-control input-sm">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="labelTxt" for="exampleInputEmail1">Chaqueta</label>
+                    <select class="form-control input-sm">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="checkbox">
+                    <label class="labelTxt"><input class="form-control input-sm" type="checkbox"> Option 1</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 2</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 3</label>
+                </div>
+                <button type="submit" class="btnCheckIn">
+                    <span class="checkIn">Solicitar</span>
+                </button>
+            </form>
+                <div class="spacer2"></div>
+            </div>
+        </div>
+    </div><!-- /page two -->
+    
+    <div class="mainContenido page" data-role="page" id="mantenimiento" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div id="info">
+                <h5 id="titulosContenido">Mantenimiento</h5>
+                <p class="txt">Que tipo de asistencia necesita?</p>
+            </div>
+            <div class="container">
+            <form  role="form">
+                <div class="checkbox">
+                    <label class="labelTxt"><input class="form-control input-sm" type="checkbox"> Baño</label>
+                    <label class="labelTxt"><input type="checkbox"> Ducha</label>
+                    <label class="labelTxt"><input type="checkbox"> Ventanas</label>
+                    <label class="labelTxt"><input class="form-control input-sm" type="checkbox"> Puerta</label>
+                    <label class="labelTxt"><input type="checkbox"> Luces</label>
+                    <label class="labelTxt"><input type="checkbox"> Otros</label>
+                </div>
+                <div class="spacer"></div>
+                <label class="txt">Comentarios</label>
+                <textarea class="form-control" rows="3"></textarea>
+                <button type="submit" class="btnCheckIn">
+                    <span class="checkIn">Solicitar</span>
+                </button>
+            </form>
+                <div class="spacer2"></div>
+            </div>
+        </div>
+    </div><!-- /page two -->
+    <div class="mainContenido page" data-role="page" id="chat" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div id="info">
+                <h5 id="titulosContenido">Chat</h5>
+                <div id="chatArea">Área de chat</div>
+            </div>
+        </div>
+    </div><!-- /page two -->
+    <div class="mainContenido page" data-role="page" id="encuestas" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div id="info">
+                <h5 id="titulosContenido">Encuestas</h5>
+            </div>
+            <div class="container">
+            <form  role="form">
+                <div class="checkbox">
+                    <label class="labelTxt">Por favor califique nuestro servicio</label>
+                    <label class="labelTxt"><input class="form-control input-sm" type="checkbox"> Option 1</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 2</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 3</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 4</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 5</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 6</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 7</label>
+                    <label class="labelTxt"><input type="checkbox"> Option 8</label>
+                </div>
+                <button type="submit" class="btnCheckIn">
+                    <span class="checkIn">Enviar</span>
+                </button>
+            </form>
+                <div class="spacer2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,226 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico">
+	<title>smartHotel</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.css" />
+    <link rel="stylesheet" href="css/theme/jquery.mobile-1.4.3.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="landscape">
+
+    <div class="page sideNav">
+        <div class="barTitle"><p class="titulo">Nombre de Hotel</p></div>
+        <div id="navPrincipal">
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="hotel.html " data-ajax="false"><span class="fa fa-h-square fa-2x icoBtnPrincipal"></span><p>Info</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="request.html" data-ajax="false"><span class="fa fa-headphones fa-2x icoBtnPrincipal"></span><p>Request</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="tools.html" data-ajax="false"><span class="fa fa-plane fa-2x icoBtnPrincipal"></span><p>Tools</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="remote.html" data-ajax="false"><span class="fa fa-bullseye fa-2x icoBtnPrincipal"></span><p>Remote</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="account.html" data-ajax="false"><span class="fa fa-usd fa-2x icoBtnPrincipal"></span><p>Account</p></a>
+                </button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btnPrincipal txtBtnPrincipal">
+                    <a href="settings.html" data-ajax="false"><span class="fa fa-cogs fa-2x icoBtnPrincipal"></span><p>Settings</p></a>
+                </button>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="infoUser" class="area">
+            <p class="txt">Welcome</p>
+            <button class="btnCheckIn"><span class="checkIn">Check In</span></button>
+        </div>
+        <div class="brand"><img src="images/wifiLogo.png" alt="Wifi" height="22px" width="auto"></div>
+    </div>
+        
+<!-- Start of page -->           
+        <div class="mainContenido page" data-role="page" id="vuelos" data-theme="a">
+            <div class="sideNavSubmenu">
+                <div class="barTitle"><p class="titulo">Tools</p></div>
+                <div id="bg submenu">
+                    <button class="btnSubMenuA">
+                       <a href="#vuelos" data-transition="slide">Horario de vuelos</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#impresion" data-transition="slide">Impresion de pasabordos <br>y documentos</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                       <a href="#" target="_blank" data-transition="slide">Guía local</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#mapas" data-transition="slide">Mapas offline</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#" target="_blank" data-transition="slide">Videos de sitios de <br>interés</a>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="contenido">
+                <div id="info">
+                    <div id="infoVuelo">
+                        <div class="aerolinea">Avianca Airlines</div>
+                        <div class="destino">Bog(COL) - Ctg(COL)
+                            <span id="vuelo" class="pull-right">Flight 2245</span>
+                        </div>
+                        <div class="salida">Salida <span class="pull-right">Llegada</span></div>
+                        <div class="hora">
+                            <span class="fa fa-clock-o"></span> 14:05
+                            <div id="horaLegada" class="pull-right"><span class="fa fa-clock-o"></span> 16:00</div>
+                        </div>
+                    </div>
+                    <div id="infoVuelo">
+                        <div class="aerolinea">LAN</div>
+                        <div class="destino">Bog(COL) - Ctg(COL)
+                            <span id="vuelo" class="pull-right">Flight 2245</span>
+                        </div>
+                        <div class="salida">Salida <span class="pull-right">Llegada</span></div>
+                        <div class="hora">
+                            <span class="fa fa-clock-o"></span> 14:05
+                            <div id="horaLegada" class="pull-right"><span class="fa fa-clock-o"></span> 16:00</div>
+                        </div>
+                    </div>
+                    <div id="infoVuelo">
+                        <div class="aerolinea">Lufthansa</div>
+                        <div class="destino">Bog(COL) - Ctg(COL)
+                            <span id="vuelo" class="pull-right">Flight 2245</span>
+                        </div>
+                        <div class="salida">Salida <span class="pull-right">Llegada</span></div>
+                        <div class="hora">
+                            <span class="fa fa-clock-o"></span> 14:05
+                            <div id="horaLegada" class="pull-right"><span class="fa fa-clock-o"></span> 16:00</div>
+                        </div>
+                    </div>
+                    <div id="infoVuelo">
+                        <div class="aerolinea">Copa Airlines</div>
+                        <div class="destino">Bog(COL) - Ctg(COL)
+                            <span id="vuelo" class="pull-right">Flight 2245</span>
+                        </div>
+                        <div class="salida">Salida <span class="pull-right">Llegada</span></div>
+                        <div class="hora">
+                            <span class="fa fa-clock-o"></span> 14:05
+                            <div id="horaLegada" class="pull-right"><span class="fa fa-clock-o"></span> 16:00</div>
+                        </div>
+                    </div>
+                    <div id="infoVuelo">
+                        <div class="aerolinea">Avianca Airlines</div>
+                        <div class="destino">Bog(COL) - Ctg(COL)
+                            <span id="vuelo" class="pull-right">Flight 2245</span>
+                        </div>
+                        <div class="salida">Salida <span class="pull-right">Llegada</span></div>
+                        <div class="hora">
+                            <span class="fa fa-clock-o"></span> 14:05
+                            <div id="horaLegada" class="pull-right"><span class="fa fa-clock-o"></span> 16:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div><!-- /page hotel -->
+    
+<!-- Start of page -->           
+    <div class="mainContenido page" data-role="page" id="impresion" data-theme="a">
+        <div class="sideNavSubmenu">
+                <div class="barTitle"><p class="titulo">Tools</p></div>
+                <div id="bg submenu">
+                    <button class="btnSubMenuA">
+                       <a href="#vuelos" data-transition="slide">Horario de vuelos</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#impresion" data-transition="slide">Impresion de <br>pasabordos y <br>documentos</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                       <a href="#" target="_blank" data-transition="slide">Guía local</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#mapas" data-transition="slide">Mapas offline</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#" target="_blank" data-transition="slide">Videos de sitios <br>de interés</a>
+                    </button>
+                </div>
+            </div>
+        <div class="contenido">
+            <div id="info">
+                <div class="infoPasabordo">
+                    <a href="http://www.avianca.com/" target="_blank"><div class="aerolinea">Avianca Airlines <span class="pull-right fa fa-arrow-circle-right"></span></div></a>
+                </div>
+                <div class="infoPasabordo">
+                    <a href="#" target="_blank"><div class="aerolinea">Copa Airlines <span class="pull-right fa fa-arrow-circle-right"></span></div></a>
+                </div>
+                <div class="infoPasabordo">
+                    <a href="#" target="_blank"><div class="aerolinea">LAN <span class="pull-right fa fa-arrow-circle-right"></span></div></a>
+                </div>
+                <div class="infoPasabordo">
+                    <a href="#" target="_blank"><div class="aerolinea">Lufthansa <span class="pull-right fa fa-arrow-circle-right"></span></div></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /page ofertas -->
+    
+<!-- Start of page -->           
+    <div class="mainContenido page" data-role="page" id="mapas" data-theme="a">
+        <div class="sideNavSubmenu">
+                <div class="barTitle"><p class="titulo">Tools</p></div>
+                <div id="bg submenu">
+                    <button class="btnSubMenuA">
+                       <a href="#vuelos" data-transition="slide">Horario de vuelos</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#impresion" data-transition="slide">Impresion de <br>pasabordos y <br>documentos</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                       <a href="#" target="_blank" data-transition="slide">Guía local</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#mapas" data-transition="slide">Mapas offline</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#" target="_blank" data-transition="slide">Videos de sitios <br>de interés</a>
+                    </button>
+                </div>
+            </div>
+        <div class="contenido">
+            <div id="info">
+                <h4>Mapas</h4>
+            </div>
+        </div>
+    </div><!-- /page ofertas -->
+
+</body>
+</html>
+
+
+
+
+
+

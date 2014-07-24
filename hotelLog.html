@@ -1,0 +1,725 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico">
+	<title>smartHotel</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.css" />
+    <link rel="stylesheet" href="css/theme/jquery.mobile-1.4.3.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+<body id="landscape">
+    
+<!-- Start of page: #hotel -->    
+        <div class="page sideNav">
+            <div class="barTitle"><p class="titulo">Nombre de Hotel</p></div>
+            <div id="navPrincipal">
+                <div class="col-xs-4">
+                    <button class="btnPrincipal txtBtnPrincipal">
+                        <a href="hotel.html" data-ajax="false"><span class="fa fa-h-square fa-2x icoBtnPrincipal"></span><p>Info</p></a>
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btnPrincipal txtBtnPrincipal">
+                        <a href="request.html" data-ajax="false"><span class="fa fa-headphones fa-2x icoBtnPrincipal"></span><p>Request</p></a>
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btnPrincipal txtBtnPrincipal">
+                        <a href="tools.html" data-ajax="false"><span class="fa fa-plane fa-2x icoBtnPrincipal"></span><p>Tools</p></a>
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btnPrincipal txtBtnPrincipal">
+                        <a href="remote.html" data-ajax="false"><span class="fa fa-bullseye fa-2x icoBtnPrincipal"></span><p>Remote</p></a>
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btnPrincipal txtBtnPrincipal">
+                        <a href="account.html" data-ajax="false"><span class="fa fa-usd fa-2x icoBtnPrincipal"></span><p>Account</p></a>
+                    </button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btnPrincipal txtBtnPrincipal">
+                        <a href="settings.html" data-ajax="false"><span class="fa fa-cogs fa-2x icoBtnPrincipal"></span><p>Settings</p></a>
+                    </button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            
+            <div id="infoUser" class="area">
+                <div class="txt">Welcome</div>
+                <div class="bgUsuarioLog nombreUsuarioLog line">Nombre usuario</div>
+                <div class="datosUsuario line">Check In: 15/09/2014</div>
+                <div class="datosUsuario line">Check Out: 19/09/2014</div>
+                <div class="datosUsuario line">Room: 5005</div>
+            </div>
+            
+            <div class="brand"><img src="images/wifiLogo.png" alt="Wifi" height="22px" width="auto"></div>
+        </div>
+            
+        <div class="mainContenido page" data-role="page" id="hotel" data-theme="a">
+            <div class="sideNavSubmenu">
+                <div class="barTitle"><p class="titulo">Acerca del Hotel</p></div>
+
+                <div id="bg submenu">
+                    <button class="btnSubMenuA">
+                       <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                       <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                    </button>
+                    <div id="accordion">
+                        <button class="btnSubMenuA">
+                            <div data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Gastronomía y bares</div>
+                        </button>
+                        <div id="collapseOne" class="panel-collapse collapse">   
+                            <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                            </button>
+                            <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                            </button>
+                            <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                            </button>
+                            <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                            </button>
+                            <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btnSubMenuA">
+                        <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                    </button>
+                    <button class="btnSubMenuA">
+                        <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="contenido">
+                <div id="info">
+                    <div id="carousel-hotel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-hotel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-hotel" data-slide-to="1"></li>
+                        <li data-target="#carousel-hotel" data-slide-to="2"></li>
+                        <li data-target="#carousel-hotel" data-slide-to="3"></li>
+                      </ol>
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <img src="images/hotel.jpg" alt="..."><div class="carousel-caption"></div>
+                        </div>
+                        <div class="item">
+                          <img src="images/hotel2.jpg" alt="..."><div class="carousel-caption"></div>
+                        </div>
+                        <div class="item">
+                          <img src="images/hotel.jpg" alt="..."><div class="carousel-caption"></div>
+                        </div>
+                        <div class="item">
+                          <img src="images/hotel2.jpg" alt="..."><div class="carousel-caption"></div>
+                        </div>
+                      </div>
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-hotel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-hotel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
+                    </div>
+
+                    <h5 id="titulosContenido">Hotel</h5>
+                    <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                        cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                        tamen, vidisse tamen noster tempor aute si noster senserit distinguantur ita quo 
+                        et tamen consequat, esse probant iis coniunctione. Ita litteris quo cernantur si 
+                        probant ut tempor. Laborum cillum aliquip singulis sed quis nescius 
+                        efflorescere, ex quem adipisicing est iudicem ipsum pariatur expetendis. Esse 
+                        ingeniis praetermissum an noster si incididunt aut sint.</p>
+                </div>
+            </div>
+        
+    </div><!-- /page hotel -->
+    
+<!-- Start of second page: #servicios -->
+    <div class="mainContenido page" data-role="page" id="servicios" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Servicios y actividades</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion1">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion1" href="#collapse1">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse1" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id="info">
+                <div id="carousel-servicios" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-servicios" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-servicios" data-slide-to="1"></li>
+                    <li data-target="#carousel-servicios" data-slide-to="2"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="images/actividades1.jpg" alt="..."><div class="carousel-caption"></div>
+                    </div>
+                    <div class="item">
+                      <img src="images/actividades2.jpg" alt="..."><div class="carousel-caption"></div>
+                    </div>
+                    <div class="item">
+                      <img src="images/actividades3.jpg" alt="..."><div class="carousel-caption"></div>
+                    </div>
+                  </div>
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-servicios" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-servicios" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+
+                <h4>Servicios</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+                <h4>Actividades</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+                <h4>Servicios</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+            </div>
+        </div>
+    </div><!-- /page servicios -->
+    
+<!-- Start of second page: #habitaciones -->
+    <div class="mainContenido page" data-role="page" id="habitaciones" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Habitaciones</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion2">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion2" href="#collapse2">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse2" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id="info">
+                <div id="carousel-rooms" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-rooms" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-rooms" data-slide-to="1"></li>
+                    <li data-target="#carousel-rooms" data-slide-to="2"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="images/room1.jpg" alt="..."><div class="carousel-caption"></div>
+                    </div>
+                    <div class="item">
+                      <img src="images/room2.jpg" alt="..."><div class="carousel-caption"></div>
+                    </div>
+                    <div class="item">
+                      <img src="images/room3.jpg" alt="..."><div class="carousel-caption"></div>
+                    </div>
+                  </div>
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-rooms" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-rooms" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+
+                <h4>Habitación 1</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+                <h4>Habitación 2</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+                <h4>Habitación 3</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+            </div>
+        </div>
+    </div><!-- /page habitaciones -->
+    
+<!-- Start of second page: #desayuno -->
+    <div class="mainContenido page" data-role="page" id="desayuno" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Desayuno</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion3">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion3" href="#collapse3">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse3" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id="info">
+                <img src="images/r2.jpg" width="100%" height="auto" alt="...">
+
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+            </div>
+        </div>
+    </div><!-- /page desayuno -->
+    
+<!-- Start of second page: #almuerzo -->
+    <div class="mainContenido page" data-role="page" id="almuerzo" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Almuerzo</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion4">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion4" href="#collapse4">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse4" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id="info">
+                <img src="images/r1.jpg" width="100%" height="auto" alt="...">
+
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+            </div>
+        </div>
+    </div><!-- /page almuerzo -->
+    
+<!-- Start of second page: #cena -->
+    <div class="mainContenido page" data-role="page" id="cena" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Cena</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion5">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion5" href="#collapse5">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse5" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id="info">
+                <img src="images/r3.jpg" width="100%" height="auto" alt="...">
+
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+
+            </div>
+        </div>
+    </div><!-- /page cena -->
+    
+<!-- Start of second page: #roomservice -->
+    <div class="mainContenido page" data-role="page" id="roomservice" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Room Service</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion6">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion6" href="#collapse6">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse6" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id="info">
+                <img src="images/r4.jpg" width="100%" height="auto" alt="...">
+
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+
+            </div>
+        </div>
+    </div><!-- /page roomservice -->
+
+<!-- Start of second page: #bar -->
+    <div class="mainContenido page" data-role="page" id="bar" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Bar</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion7">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion7" href="#collapse7">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse7" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id="info">
+                <img src="images/r7.jpg" width="100%" height="auto" alt="...">
+
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+            </div>
+        </div>
+    </div><!-- /page bar -->
+    
+<!-- Start of second page: #eventos -->
+    <div class="mainContenido page" data-role="page" id="eventos" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Eventos y Salones</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion8">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion8" href="#collapse8">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse8" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id="info">
+                <img src="images/salon.jpg" width="100%" height="auto" alt="...">
+
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+                <h4>Habitación 3</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+            </div>
+        </div>
+    </div><!-- /page eventos -->
+    
+<!-- Start of second page: #ofertas -->
+    <div class="mainContenido page" data-role="page" id="ofertas" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Ofertas</p></div>
+        
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#hotel" data-transition="slide">Acerca del Hotel</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#servicios" data-transition="slide">Servicios y actividades</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#habitaciones" data-transition="slide"> Habitaciones</a>
+                </button>
+                <div id="accordion9">
+                    <button class="btnSubMenuA">
+                        <div data-toggle="collapse" data-parent="#accordion9" href="#collapse9">Gastronomía y bares</div>
+                    </button>
+                    <div id="collapse9" class="panel-collapse collapse">   
+                        <button class="btnSubMenuC"><a href="#desayuno" data-transition="slide">Desayuno</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#almuerzo" data-transition="slide">Almuerzo</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#cena" data-transition="slide">Cena</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#roomservice" data-transition="slide">Room Service</a>
+                        </button>
+                        <button class="btnSubMenuC"><a href="#bar" data-transition="slide">Bar, Cocteles<br> y Vinos</a>
+                        </button>
+                    </div>
+                </div>
+                <button class="btnSubMenuA">
+                    <a href="#eventos" data-transition="slide">Directorio de eventos <br>y salones</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#ofertas" data-transition="slide">Ofertas especiales <br>y proximas reservas</a>
+                </button>
+            </div>
+        </div>
+        <div class="contenido">
+            <div id="info">
+                <img src="images/ofertas.jpg" width="100%" height="auto" alt="...">
+
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+                <h4>Titulo</h4>
+                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
+                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
+                    tamen.</p>
+            </div>
+        </div>
+    </div><!-- /page ofertas -->
+
+</body>
+</html>
+
+
+
+
+
+
