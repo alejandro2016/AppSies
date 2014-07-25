@@ -4,7 +4,7 @@
     id        = "http://wifienter.com"
     version   = "0.0.2">
 
-<name>Smart HOTEL v0.0.2</name>
+<name>Smart HOTEL v0.0.3</name>
 
 <content src="index.html"/>
 
