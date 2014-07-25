@@ -84,8 +84,8 @@
                 <div data-role="controlgroup" data-type="horizontal">
                     <input type="text" id="search-control-group" placeholder="Código" data-wrapper-class="controlgroup-textinput ui-btn">
                     
-                    <button class="btnIntro btn-sm" data-theme="a">
-                        <a class="btnIntro" href="hotel.html" data-ajax="false">Go!</a>
+                    <button class="btnIntro btn-sm" data-theme="a" onClick="login()">
+                        <a class="btnIntro" data-ajax="false">Go!</a>
                     </button>
                 </div>
             </div>
@@ -98,7 +98,29 @@
 
     </div><!-- /page two -->
     
-    
+ <script charset="utf&minus;8" type="text/javascript">
+function login()
+{
+ var control = $("#search-control-group").val();	
+ $.get("http://190.145.24.146/app/hotel_login.php",{id_hotel: control}, loginres, "jsonp");
+ 
+ function loginres(respuesta){
+				if (respuesta.licencia != "" && respuesta.licencia != "no") {
+                        var licencia = respuesta.licencia;
+                        var alias = respuesta.alias;						
+					                            localStorage.setItem("mem_licencia", licencia);
+												localStorage.setItem("mem_alias", alias);
+						console.log("Acceso a hotel" + alias);
+						location.reload();
+						document.location.href = "hotel.html";
+                    } else {
+						console.log("Acceso denegado" + respuesta);
+                        document.location.href = "index.html";
+                           }
+				
+				    }
+}
+</script>    
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

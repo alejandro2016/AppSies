@@ -24,20 +24,48 @@
 <div class="bg" data-role="page" >
     <div class="bgLog">
         <div class="txtLog">
-            <form role="form">
+            <form >
                 <div class="form-group">
-                    <input type="text" class="form-control input-sm" id="exampleInputEmail1" placeholder="Nombre">
+                    <input type="text" class="form-control input-sm" id="exampleInputEmail1" placeholder="Nombre o Apellido">
                 </div>
                 <div class="form-group ">
-                    <input type="text" class="form-control input-sm" id="exampleInputPassword1" placeholder="Documento">
+                    <input type="text" class="form-control input-sm" id="exampleInputPassword1" placeholder="Habitación">
                 </div>
                 <input type="checkbox"> <div class="terminosCond">Acepto terminos y condiciones</div>
-                <button class="btnCheckIn "><a class="txtWhite" href="hotelLog.html" data-ajax="false">Check In</a></button>
+                <button class="btnCheckIn " onClick="login_guest()"><a class="txtWhite" data-ajax="false">Check In</a></button>
             </form>
         </div>
     </div>
 </div>
-
+<script charset="utf&minus;8" type="text/javascript">
+function login_guest()
+{
+           var pass = $("#exampleInputEmail1").val();
+           var user = $("#exampleInputPassword1").val();	
+ $.get("http://190.145.24.146/app/testoi.php",{username: user, password: pass }, loginres2, "jsonp");
+ 
+ function loginres2(respuesta){
+				if (respuesta.room != "no") {
+                        var hab_db = respuesta.room;
+						var nom_db = respuesta.nombre;
+						var fol_db = respuesta.folio;
+						var sal_db = respuesta.salida;
+						var lle_db = respuesta.llegada;	
+						                        localStorage.setItem("roomdb", hab_db);
+												localStorage.setItem("nombredb", nom_db);
+												localStorage.setItem("foliodb", fol_db);
+												localStorage.setItem("salidadb", sal_db);
+												localStorage.setItem("llegadadb", lle_db);					
+						console.log("logeado Sr" + nom_db);
+						document.location.href = "hotelLog.html";
+                    } else {
+						console.log("Acceso denegado" + respuesta);
+                        document.location.href = "hotel.html";
+                           }
+				
+				    }
+}
+</script>
 
 </body>
 </html>

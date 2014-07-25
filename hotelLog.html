@@ -24,7 +24,8 @@
     
 <!-- Start of page: #hotel -->    
         <div class="page sideNav">
-            <div class="barTitle"><p class="titulo">Nombre de Hotel</p></div>
+            <div id="p_alias" class="barTitle"><p class="titulo"><span></span></p></div>
+            <script>var p_alias = localStorage.getItem("mem_alias");$("#p_alias span").html(': '+p_alias);</script>
             <div id="navPrincipal">
                 <div class="col-xs-4">
                     <button class="btnPrincipal txtBtnPrincipal">
@@ -61,10 +62,14 @@
             
             <div id="infoUser" class="area">
                 <div class="txt">Welcome</div>
-                <div class="bgUsuarioLog nombreUsuarioLog line">Nombre usuario</div>
-                <div class="datosUsuario line">Check In: 15/09/2014</div>
-                <div class="datosUsuario line">Check Out: 19/09/2014</div>
-                <div class="datosUsuario line">Room: 5005</div>
+                <div id="p_nombre" class="bgUsuarioLog nombreUsuarioLog line"><span>Nombre usuario</span></div>
+            <script>var p_nom = localStorage.getItem("nombredb");$("#p_nombre span").html(': '+p_nom);</script>
+                <div id="p_llegada" class="datosUsuario line">Check In:<span></span></div>
+                <script>var p_lleg = localStorage.getItem("llegadadb");$("#p_llegada span").html(': '+p_lleg);</script>
+                <div id="p_salida" class="datosUsuario line">Check Out: <span></span></div>
+                <script>var p_sal = localStorage.getItem("salidadb");$("#p_salida span").html(': '+p_sal);</script>
+                <div id="p_room" class="datosUsuario line">Room: <span></span></div>
+                <script>var p_room = localStorage.getItem("roomdb");$("#p_room span").html(': '+p_room);</script>
             </div>
             
             <div class="brand"><img src="images/wifiLogo.png" alt="Wifi" height="22px" width="auto"></div>
