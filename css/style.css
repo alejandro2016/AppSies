@@ -17,13 +17,13 @@
 body{
     
     font-family: 'Open Sans', sans-serif !important;
-    font-size: 10pt;
+    font-size: 10px;
     font-weight: 500;
     color: #333333;
     width: 100%;
-    height: 768px;
-    max-height: 768px;
-    max-width: 1024px;
+    height: 937px;
+    max-height: 937px;
+    max-width: 1383px;
 }
 .spacer{height: 10px;} .spacer2{height: 20px;} .spacer3{height: 30px;} .spacer4{height: 40px;}
 
@@ -31,12 +31,12 @@ body{
 .logoSmart{padding-top: 30px; padding-bottom: 30px; text-align: center; margin-left: auto; margin-right: auto;}
 .logoWifiIntro{ padding-right: 10px; padding-top: 28px; float: right;}
 .logoWifi{ padding-left: 10px; padding-top: 28px; float: left;}
-.page{ margin-top: 20px;}
+/*.page{ margin-top: 20px;}*/
 
 /* *************** AREAS ACTIVAS */
 .sideNav{
     width: 28%;
-    height: 768px;
+    height: 937px;
     z-index: 99;
     float: left;
     position: absolute;
@@ -45,7 +45,7 @@ body{
 .mainContenido .contenido {float: right;}
 .sideNavSubmenu{
     width: 28%;
-    height: 768px;
+    height: 937px;
     background: url(../images/bg.png) center top; background-repeat: no-repeat;
     overflow: scroll;
     border-left: 1px solid;
@@ -53,12 +53,12 @@ body{
 }
 .contenido{
     width: 44%;
-    height: 768px;
+    height: 937px;
     overflow: scroll;
     border-left: 1px solid;
     border-color: rgba(198,198,198,1);
 }
-.revisionCuenta{ width: 72%; height: 768px; float: right;}
+.revisionCuenta{ width: 72%; height: 937px; float: right;}
 .cuenta{width: 95%; margin-left: auto; margin-right: auto;}
 #titulosContenido{ padding-left: 15px; padding-right: 15px;}
 #txtContenido{ padding-left: 15px!important; padding-right: 15px !important;}
@@ -76,9 +76,9 @@ margin-top: -140px; /*half height*/
 position: absolute;
 left: 50%;
 top: 50%;
-width: 226px;
+width: 326px;
 height: 286px;
-margin-left: -113px;
+margin-left: -163px;
 margin-top: -143px;
 }
 .sliderIntro{
@@ -95,7 +95,7 @@ margin-top: -143px;
     margin-right: auto;
 }
 a.btnIntro{ color: #ffffff !important; font-weight: 400!important;}
-a{ color: #980000 !important; font-weight: 400!important;}
+a{ color: #980000 !important; font-weight: 400!important; }
 a:hover{ text-decoration: none;}
 button{border: 0px !important;}
 button.btnIntro{
@@ -141,9 +141,9 @@ button.btnIntro{
 /* *************** NAVEGACION PRINCIPAL */
 .btnPrincipal{
     margin-left: 1px !important;
-    margin-top: 3px !important;
+    margin-top: 25px !important;
     width: 90% !important; 
-    height: 54px !important;
+    height: 154px !important;
     
     -webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
@@ -164,7 +164,7 @@ button.btnIntro{
     padding-bottom: 10px !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
-    font-size: .75em !important;
+    font-size: 1.75em !important;
     color: #980000 !important;
     font-weight: 400 !important;
     text-align: center !important;
@@ -175,13 +175,13 @@ button.btnIntro{
 }
 
 /* *************** BOTONES */
-.submenu{    max-height: 768px;}
+.submenu{    max-height: 937px;}
 .btnSubMenuA p, .btnSubMenuB p, .btnSubMenuC p, { max-width: 95% !important; }
 .btnSubMenuA a, .btnSubMenuB a {color: #525858 !important;}
 
 .btnSubMenuA{
     width: 93% !important;
-    min-height: 30px;
+    min-height: 120px;
     
     text-align: left;
     
@@ -191,7 +191,7 @@ button.btnIntro{
     margin-right: auto;
     
     font-weight: 400;
-    font-size: .76em;
+    font-size: 1.76em;
     text-shadow: 2px 2px 3px #949494;
     
     -webkit-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.2);
@@ -276,7 +276,7 @@ button.btnIntro{
 .nombreUsuario, .roomUsuario, .headCuenta, .datosCuenta{color: #525858;}
 
 #infoUser{
-    padding-top: 160%;
+    padding-top: 90%;
 }
 .nombreUsuarioLog{text-shadow: none; padding: 5px; color: white;}
 .datosUsuario{padding-bottom: 3px; padding-top: 3px; padding-left: 5px; padding-right: 5px;}
@@ -284,15 +284,15 @@ button.btnIntro{
     background: url(../images/bg.png) center -170px;
     background-repeat: no-repeat;
     width: 100%;
-    height: 604px !important;
+    height: 509px !important;
 }
 .txt{
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.barTitle{ background: rgba(153,0,0,1); height: 25px;}
-.titulo{color: #ffffff; text-align: center; font-weight: 300; text-shadow: none;}
+.barTitle{ background: rgba(153,0,0,1); height: 35px;}
+.titulo{color: #ffffff; text-align: center; font-weight: 300; text-shadow: none; font-size: 1.76em;}
 .btnCheckIn{
     margin-left: 4% !important;
     margin-right: auto !important;
@@ -332,7 +332,7 @@ button.btnIntro{
     padding-right: 10px;
 }
 #info p{
-    font-size: .9em;
+    font-size: 1.4em;
 }
 
 #chatArea{
