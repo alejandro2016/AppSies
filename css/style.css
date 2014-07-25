@@ -17,7 +17,7 @@
 body{
     
     font-family: 'Open Sans', sans-serif !important;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 500;
     color: #333333;
     width: 100%;
@@ -126,7 +126,7 @@ button.btnIntro{
     font-weight: 300;
 }
 
-.skipBtn{ text-decoration: none; font-weight: 300; font-size: .8em; text-align: center !important; margin-left: auto; margin-right: auto; color: grey;}
+.skipBtn{ text-decoration: none; font-weight: 300; font-size: 1.8em; text-align: center !important; margin-left: auto; margin-right: auto; color: grey;}
 
 .bgLog{background:rgba(2,2,2,0.6); height: 100% !important; width: 100%;}
 .txtLog{
@@ -137,7 +137,7 @@ button.btnIntro{
     text-shadow: none;
     color: #ffffff;
 }
-.terminosCond{margin-left: 30px; padding-top: 7px; font-size: .8em; padding-bottom: 20px;}
+.terminosCond{margin-left: 30px; padding-top: 7px; font-size: 1.8em; padding-bottom: 20px;}
 /* *************** NAVEGACION PRINCIPAL */
 .btnPrincipal{
     margin-left: 1px !important;
@@ -245,7 +245,7 @@ button.btnIntro{
     margin-right: 6px;
     
     font-weight: 400;
-    font-size: .8em;
+    font-size: 1.8em;
     text-shadow: 2px 2px 3px #949494;
     color: #980000 !important;
     float: right;
@@ -267,9 +267,9 @@ button.btnIntro{
     border-color: #929898;
 }
 .nombreUsuario{font-weight: 700; font-size: 1em;}
-.roomUsuario{font-weight: 300; font-size: .8em; padding-bottom: 4px; padding-top: 3px;}
+.roomUsuario{font-weight: 300; font-size: 1.8em; padding-bottom: 4px; padding-top: 3px;}
 .headCuenta{font-weight: 600;}
-.datosCuenta, .datosUsuario{font-size: .8em}
+.datosCuenta, .datosUsuario{font-size: 1.5em}
 
 .bgUsuarioLog{background: #525858; height:auto;}
 
@@ -312,7 +312,7 @@ button.btnIntro{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990000', endColorstr='#6d0000',GradientType=0 ); /* IE6-9 */
 }
 .checkIn{
-    font-size: .8em !important;
+    font-size: 1.8em !important;
     text-shadow: none !important;
     font-weight: 300 !important;
     color: white;
@@ -323,7 +323,7 @@ button.btnIntro{
     text-align: center;
     bottom: 0px;
 }
-.labelTxt{font-size: .8em;}
+.labelTxt{font-size: 21.8em;}
 .txtWhite{color: #ffffff !important;}
 /* ****************************** SECTIONS */
 /* *************** HOTEL */
@@ -359,7 +359,7 @@ button.btnIntro{
 .aerolinea, .hora{ font-weight: 700; font-size: 1.1em;}
 .destino{font-weight: 600; padding-top: 0px; font-size: .9em;}
 #vuelo{color: #980000; }
-.salida{font-size: .8em; padding-top: 5px; color: #929898;}
+.salida{font-size: 1.8em; padding-top: 5px; color: #929898;}
 
 .infoPasabordo{
     padding-left: 5px;
