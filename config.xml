@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.phonegap.example"
-    version   = "3.0.0">
+    id        = "http://wifienter.com"
+    version   = "0.0.1">
 
-<name>GuestPortal4 Beta2</name>
+<name>Smart HOTEL</name>
 
 <content src="index.html"/>
 
@@ -13,7 +13,7 @@ Powerfull Guest Tools for hospitality services.
 </description>
 
 <author href="http://wifienter.com" email="alejandro.c@wifienter.net">
-TravelMedia - By Alejandro Osorio 2013
+Wifientertainment SAS - By Alejandro Osorio 2014
 </author>
 <icon src="icon.png" gap:platform="android" gap:density="ldpi" />
 
@@ -25,5 +25,8 @@ TravelMedia - By Alejandro Osorio 2013
 <access origin="http://190.145.24.146" browserOnly="true" />
 <access origin="http://wifienter.net" browserOnly="true" />
 <access origin="*" browserOnly="true" />
+
+<preference name="Orientation" value="landscape" />
+<preference name="Fullscreen" value="true" />
 
 </widget>

@@ -9,7 +9,6 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background: url(../images/smarthotelLogo.png) center top;
         background-repeat: no-repeat;
         opacity:1;
     }
@@ -19,12 +18,12 @@ body{
     
     font-family: 'Open Sans', sans-serif !important;
     font-size: 10pt;
-    font-weight: 300;
+    font-weight: 500;
     color: #333333;
     width: 100%;
-    height: 300px;
-    max-height: 300px;
-    max-width: 568px;
+    height: 768px;
+    max-height: 768px;
+    max-width: 1024px;
 }
 .spacer{height: 10px;} .spacer2{height: 20px;} .spacer3{height: 30px;} .spacer4{height: 40px;}
 
@@ -37,7 +36,7 @@ body{
 /* *************** AREAS ACTIVAS */
 .sideNav{
     width: 28%;
-    height: 300px;
+    height: 768px;
     z-index: 99;
     float: left;
     position: absolute;
@@ -46,7 +45,7 @@ body{
 .mainContenido .contenido {float: right;}
 .sideNavSubmenu{
     width: 28%;
-    height: 300px;
+    height: 768px;
     background: url(../images/bg.png) center top; background-repeat: no-repeat;
     overflow: scroll;
     border-left: 1px solid;
@@ -54,17 +53,34 @@ body{
 }
 .contenido{
     width: 44%;
-    height: 300px;
+    height: 768px;
     overflow: scroll;
     border-left: 1px solid;
     border-color: rgba(198,198,198,1);
 }
-.revisionCuenta{ width: 72%; height: 300px; float: right;}
+.revisionCuenta{ width: 72%; height: 768px; float: right;}
 .cuenta{width: 95%; margin-left: auto; margin-right: auto;}
 #titulosContenido{ padding-left: 15px; padding-right: 15px;}
 #txtContenido{ padding-left: 15px!important; padding-right: 15px !important;}
 /* *************** INTRO */
-.intro{    height: 280px;}
+.intro{    height: 280px;
+position: absolute;
+left: 50%;
+top: 50%;  
+width: 500px;
+height: 280px;
+margin-left: -250px; /*half width*/
+margin-top: -140px; /*half height*/
+}
+.pag_tablet{ 
+position: absolute;
+left: 50%;
+top: 50%;
+width: 226px;
+height: 286px;
+margin-left: -113px;
+margin-top: -143px;
+}
 .sliderIntro{
     padding-top: 20px;
     width: 500px;
@@ -159,7 +175,7 @@ button.btnIntro{
 }
 
 /* *************** BOTONES */
-.submenu{    max-height: 300px;}
+.submenu{    max-height: 768px;}
 .btnSubMenuA p, .btnSubMenuB p, .btnSubMenuC p, { max-width: 95% !important; }
 .btnSubMenuA a, .btnSubMenuB a {color: #525858 !important;}
 
@@ -260,7 +276,7 @@ button.btnIntro{
 .nombreUsuario, .roomUsuario, .headCuenta, .datosCuenta{color: #525858;}
 
 #infoUser{
-    padding-top: 10px;
+    padding-top: 160%;
 }
 .nombreUsuarioLog{text-shadow: none; padding: 5px; color: white;}
 .datosUsuario{padding-bottom: 3px; padding-top: 3px; padding-left: 5px; padding-right: 5px;}
@@ -268,7 +284,7 @@ button.btnIntro{
     background: url(../images/bg.png) center -170px;
     background-repeat: no-repeat;
     width: 100%;
-    height: 131px !important;
+    height: 604px !important;
 }
 .txt{
     padding-left: 10px;
@@ -280,7 +296,6 @@ button.btnIntro{
 .btnCheckIn{
     margin-left: 4% !important;
     margin-right: auto !important;
-    height: 28px !important;
     width: 90% !important;
     text-align: center;
     -webkit-border-radius: 4px 4px 4px 4px;
@@ -297,7 +312,7 @@ button.btnIntro{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990000', endColorstr='#6d0000',GradientType=0 ); /* IE6-9 */
 }
 .checkIn{
-    font-size: .9em !important;
+    font-size: .8em !important;
     text-shadow: none !important;
     font-weight: 300 !important;
     color: white;
