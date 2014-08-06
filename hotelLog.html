@@ -11,16 +11,18 @@
     <link rel="stylesheet" href="css/theme/jquery.mobile-1.4.3.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.mobile-1.4.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
     
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
     
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
 </head>
-<body id="landscape">
+<body id="landscape" onLoad="controlsesion()">
     
 <!-- Start of page: #hotel -->    
         <div class="page sideNav">
@@ -63,13 +65,13 @@
             <div id="infoUser" class="area">
                 <div class="txt">Welcome</div>
                 <div id="p_nombre" class="bgUsuarioLog nombreUsuarioLog line"><span>Nombre usuario</span></div>
-            <script>var p_nom = localStorage.getItem("nombredb");$("#p_nombre span").html(': '+p_nom);</script>
+            <script>var p_nom = localStorage.getItem("nombredb");$("#p_nombre span").html(p_nom);</script>
                 <div id="p_llegada" class="datosUsuario line">Check In:<span></span></div>
-                <script>var p_lleg = localStorage.getItem("llegadadb");$("#p_llegada span").html(': '+p_lleg);</script>
+                <script>var p_lleg = localStorage.getItem("llegadadb");$("#p_llegada span").html(p_lleg);</script>
                 <div id="p_salida" class="datosUsuario line">Check Out: <span></span></div>
-                <script>var p_sal = localStorage.getItem("salidadb");$("#p_salida span").html(': '+p_sal);</script>
+                <script>var p_sal = localStorage.getItem("salidadb");$("#p_salida span").html(p_sal);</script>
                 <div id="p_room" class="datosUsuario line">Room: <span></span></div>
-                <script>var p_room = localStorage.getItem("roomdb");$("#p_room span").html(': '+p_room);</script>
+                <script>var p_room = localStorage.getItem("roomdb");$("#p_room span").html(p_room);</script>
             </div>
             
             <div class="brand"><img src="images/wifiLogo.png" alt="Wifi" height="22px" width="auto"></div>

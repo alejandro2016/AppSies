@@ -15,15 +15,17 @@
     
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
     
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body id="landscape">
+<body onLoad="controlsesion()" id="landscape">
 
     <div class="page sideNav">
-        <div class="barTitle"><p class="titulo">Nombre de Hotel</p></div>
+       <div id="p_alias" class="barTitle"><p class="titulo"><span></span></p></div>
+            <script>var p_alias = localStorage.getItem("mem_alias");$("#p_alias span").html(p_alias);</script>
         <div id="navPrincipal">
             <div class="col-xs-4">
                 <button class="btnPrincipal txtBtnPrincipal">
@@ -58,11 +60,16 @@
         </div>
         <div class="clearfix"></div>
         <div id="infoUser" class="area">
-            <p class="txt">Welcome</p>
-            <button class="btnCheckIn">
-                <span class="checkIn">Check In</span>
-            </button>
-        </div>
+                <div class="txt">Welcome</div>
+                <div id="p_nombre" class="bgUsuarioLog nombreUsuarioLog line"><span>Nombre usuario</span></div>
+            <script>var p_nom = localStorage.getItem("nombredb");$("#p_nombre span").html(p_nom);</script>
+                <div id="p_llegada" class="datosUsuario line">Check In:<span></span></div>
+                <script>var p_lleg = localStorage.getItem("llegadadb");$("#p_llegada span").html(p_lleg);</script>
+                <div id="p_salida" class="datosUsuario line">Check Out: <span></span></div>
+                <script>var p_sal = localStorage.getItem("salidadb");$("#p_salida span").html(p_sal);</script>
+                <div id="p_room" class="datosUsuario line">Room: <span></span></div>
+                <script>var p_room = localStorage.getItem("roomdb");$("#p_room span").html(p_room);</script>
+            </div>
         <div class="brand"><img src="images/wifiLogo.png" alt="Wifi" height="22px" width="auto"></div>
     </div>
     
@@ -76,7 +83,7 @@
                    <a href="#amallaves" data-transition="slide">Ama de llaves</a>
                 </button>
                 <button class="btnSubMenuA">
-                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                    <a onClick=" print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
                 </button>
                 <button class="btnSubMenuA">
                    <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
@@ -110,7 +117,7 @@
                    <a href="#amallaves" data-transition="slide">Ama de llaves</a>
                 </button>
                 <button class="btnSubMenuA">
-                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                    <a onClick=" print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
                 </button>
                 <button class="btnSubMenuA">
                    <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
@@ -126,10 +133,10 @@
 
         <div class="contenido">
             <div class="container">
-            <form  role="form">
+<form  role="form">
                 <div class="form-group">
                     <label class="labelTxt" for="exampleInputEmail1">Pantalones</label>
-                    <select class="form-control ">
+                    <select id="lavanderia_pantalones" class="form-control ">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -139,7 +146,7 @@
                 </div>
                 <div class="form-group">
                     <label class="labelTxt" for="exampleInputEmail1">Camisa</label>
-                    <select class="form-control input-sm">
+                    <select id="lavanderia_camisa" class="form-control input-sm">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -149,7 +156,7 @@
                 </div>
                 <div class="form-group">
                     <label class="labelTxt" for="exampleInputEmail1">Chaqueta</label>
-                    <select class="form-control input-sm">
+                    <select id="lavanderia_chaqueta" class="form-control input-sm">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -158,19 +165,126 @@
                     </select>
                 </div>
                 <div class="checkbox">
-                    <label class="labelTxt"><input class="form-control input-sm" type="checkbox"> Option 1</label>
-                    <label class="labelTxt"><input type="checkbox"> Option 2</label>
-                    <label class="labelTxt"><input type="checkbox"> Option 3</label>
+                    <label class="labelTxt"><input id="lavanderia_op1" class="form-control input-sm" type="checkbox"> Lavado de seda</label>
+                    <label class="labelTxt"><input id="lavanderia_op2" type="checkbox"> Lavado Express</label>
+                    <label class="labelTxt"><input id="lavanderia_op3" type="checkbox"> Lavado y Planchado</label>
                 </div>
-                <button class="btnCheckIn">
+                <button class="btnCheckIn" onClick="handle_lavanderia()">
                     <span class="checkIn">Solicitar</span>
                 </button>
             </form>
+            </div>
+ 
                 <div class="spacer2"></div>
+
+        </div>
+    </div>
+    <!-- Start of second page: #page1 -->
+    <div class="mainContenido page" data-role="page" id="lavanderiaenespera" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a onClick=" print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
             </div>
         </div>
-    </div><!-- /page two -->
-    
+
+   <div class="contenido">
+            <div id="infolav1">
+                <img src="images/lavanderia.jpg" width="100%" height="auto" alt="...">
+
+                <h2>Servicio de Lavander&iacute;a</h2>
+                <p id="p_enespera">El servicio de lavander&iacute;a ya ha sido solicitado para esta habitaci&oacute;n con el c&oacute;digo <span></span> porfavor espere a que recojamos sus prendas y podr&aacute; saber mediante esta misma pantalla cuando sus prendas esten listas.</p>
+                <script>var control_lavanderiacodigo = localStorage.getItem("mem_lavanderiacodigo");$("#p_enespera span").html(control_lavanderiacodigo);</script>
+                
+            </div>
+        </div>
+    </div>
+    <!-- /page two -->
+        <!-- Start of second page: #page1 -->
+    <div class="mainContenido page" data-role="page" id="lavanderiaenproceso" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a onClick=" print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
+            </div>
+        </div>
+
+   <div class="contenido">
+            <div id="info2">
+                <img src="images/lavanderia.jpg" width="100%" height="auto" alt="...">
+
+                <h2>Servicio de Lavander&iacute;a</h2>
+                <p id="p_enproceso">El servicio de lavander&iacute;a ya ha sido solicitado con el c&oacute;digo no <span></span> y sus prendas han sido recogidas para esta habitaci&oacute;n, el tiempo de espera m&aacute;ximo para sus prendas es de <p id="p_enprocesotiempo"></p>,tan pronto terminemos le notificaremos en la aplicaci&oacute;n y dejaremos sus prendas en su habitaci&oacute;n.</p>
+                <script>var control_lavanderiacodigo = localStorage.getItem("mem_lavanderiacodigo");$("#p_enproceso span").html(control_lavanderiacodigo);var tiempoestimadolavanderia = localStorage.getItem("mem_lavanderiatiempo");$("#p_enprocesotiempo").html(tiempoestimadolavanderia);</script>
+            </div>
+        </div>
+    </div>
+    <!-- /page two -->
+        <!-- Start of second page: #page1 -->
+    <div class="mainContenido page" data-role="page" id="lavanderiafinalizada" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a onClick=" print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
+            </div>
+        </div>
+
+   <div class="contenido">
+            <div id="info3">
+                <img src="images/lavanderia.jpg" width="100%" height="auto" alt="...">
+
+                <h2>Servicio de Lavander&iacute;a</h2>
+                <p id="p_finalizado">El servicio de lavander&iacute;a ya ha terminado con la solicitud no. <span></span> , sus prendas estan listas y ser&aacute;n dejadas en su habitaci&oacute;n.</p>
+                <script>var control_lavanderiacodigo = localStorage.getItem("mem_lavanderiacodigo");$("#p_finalizado span").html(control_lavanderiacodigo);</script>
+            </div>
+        </div>
+    </div>
+    <!-- /page two -->    
     <div class="mainContenido page" data-role="page" id="mantenimiento" data-theme="a">
         <div class="sideNavSubmenu">
             <div class="barTitle"><p class="titulo">Request</p></div>
@@ -180,7 +294,7 @@
                    <a href="#amallaves" data-transition="slide">Ama de llaves</a>
                 </button>
                 <button class="btnSubMenuA">
-                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                    <a onClick=" print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
                 </button>
                 <button class="btnSubMenuA">
                    <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
@@ -229,7 +343,7 @@
                    <a href="#amallaves" data-transition="slide">Ama de llaves</a>
                 </button>
                 <button class="btnSubMenuA">
-                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                    <a onClick=" print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
                 </button>
                 <button class="btnSubMenuA">
                    <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
@@ -259,7 +373,7 @@
                    <a href="#amallaves" data-transition="slide">Ama de llaves</a>
                 </button>
                 <button class="btnSubMenuA">
-                    <a href="#lavanderia" data-transition="slide">Lavandería</a>
+                    <a onClick=" print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
                 </button>
                 <button class="btnSubMenuA">
                    <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
