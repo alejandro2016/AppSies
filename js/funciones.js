@@ -82,3 +82,24 @@ function handle_lavanderia()
 				
 				   
 }
+
+function handle_amadellaves()
+{
+ var nombre_amadellaves = localStorage.getItem("nombredb");
+ var room_amadellaves = localStorage.getItem("roomdb");
+ var amadellaves_llamar = $("#checkboxamadellaves").val();
+ var amadellaves_limpieza = $("#flip-1").val();
+ var amadellaves_nomolestar = $("#flip-2").val();
+ 	
+ $.get("http://190.145.24.146/app/amadellaves.php",{room: room_amadellaves, nombre: nombre_amadellaves, llamar: amadellaves_llamar, limpieza: amadellaves_limpieza, nomolestar: amadellaves_nomolestar}, amadellavesres, "jsonp");
+ 
+ function amadellavesres(respuesta){
+				        var amadellaves_codigosolicitud = respuesta.codigosolicitud;
+                                              localStorage.setItem("mem_amadellavescodigo", amadellaves_codigosolicitud);
+						console.log("Se envio solicitud de ama de llaves: " + amadellaves_codigosolicitud);
+						}
+						document.location.href = "request.html#solicitudenviada";
+				
+				   
+}
+

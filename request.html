@@ -100,9 +100,56 @@
         <div class="contenido">
             <div id="info">
                 <h5 id="titulosContenido">Ama de llaves</h5>
-                <p id="txtContenido">Fabulas quis duis proident magna. Ex quid culpa varias occaecat, si dolor 
-                    cernantur domesticarum e velit se nescius ex quorum id admodum elit ipsum iis 
-                    tamen.</p>
+                <p id="txtContenido"><label for="flip-1">Desea limpieza de habitaci&oacute;n ?:</label>
+<select name="flip-1" id="flip-1" data-role="slider">
+	<option value="si">Si</option>
+	<option value="no">No</option>
+</select> </p>
+<p id="txtContenido"><label for="flip-2">No molestar?:</label>
+<select name="flip-2" id="flip-2" data-role="slider">
+	<option value="no">No</option>
+	<option value="si">Si</option>
+</select> </p>
+<p id="txtContenido">
+            <div class="checkbox">
+                   <label class="labelTxt"><input type="checkbox" id="checkboxamadellaves"> Deseo asistencia en mi habitaci&oacute;n</label>
+                </div>
+<button class="btnCheckIn" onClick="handle_amadellaves()">
+                    <span class="checkIn">Solicitar</span>
+                </button></p>
+            </div>
+        </div>
+    </div><!-- /page two -->
+    
+    <!-- Start of second page: #page1 -->
+    <div class="mainContenido page" data-role="page" id="solicitudenviada" data-theme="a">
+        <div class="sideNavSubmenu">
+            <div class="barTitle"><p class="titulo">Request</p></div>
+
+            <div id="bg submenu">
+                <button class="btnSubMenuA">
+                   <a href="#amallaves" data-transition="slide">Ama de llaves</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a onClick="print_lavanderia();" href="#" data-transition="slide">Lavandería</a>
+                </button>
+                <button class="btnSubMenuA">
+                   <a href="#mantenimiento" data-transition="slide">Mantenimiento</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#chat" data-transition="slide">Chat</a>
+                </button>
+                <button class="btnSubMenuA">
+                    <a href="#encuestas" data-transition="slide">Encuestas de <br>satisfacción</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div id="info">
+                <h5 id="titulosContenido">Ama de llaves</h5>
+                <p id="p_solicitudenviada" class="clasepadding">Su solicitud ha sido enviada correctamente al departamento de Ama de llaves y la estamos procesando internamente, pronto personal del Hotel dar&aacute; respuesta a su requerimiento. Solicitud No:<b><span></span></b></p>
+                <script>var control_amadellavescodigop = localStorage.getItem("mem_amadellavescodigo");$("#p_solicitudenviada span").html(control_amadellavescodigop);</script>
             </div>
         </div>
     </div><!-- /page two -->
@@ -207,8 +254,8 @@
             <div id="infolav1">
                 <img src="images/lavanderia.jpg" width="100%" height="auto" alt="...">
 
-                <h2>Servicio de Lavander&iacute;a</h2>
-                <p id="p_enespera">El servicio de lavander&iacute;a ya ha sido solicitado para esta habitaci&oacute;n con el c&oacute;digo <span></span> porfavor espere a que recojamos sus prendas y podr&aacute; saber mediante esta misma pantalla cuando sus prendas esten listas.</p>
+                <h5 id="titulosContenido">Servicio de Lavander&iacute;a</h5>
+                <p id="p_enespera" class="clasepadding">El servicio de lavander&iacute;a ya ha sido solicitado para esta habitaci&oacute;n con el c&oacute;digo <b><span></span></b> porfavor espere a que recojamos sus prendas y podr&aacute; saber mediante esta misma pantalla cuando sus prendas esten listas.</p>
                 <script>var control_lavanderiacodigo = localStorage.getItem("mem_lavanderiacodigo");$("#p_enespera span").html(control_lavanderiacodigo);</script>
                 
             </div>
@@ -243,8 +290,8 @@
             <div id="info2">
                 <img src="images/lavanderia.jpg" width="100%" height="auto" alt="...">
 
-                <h2>Servicio de Lavander&iacute;a</h2>
-                <p id="p_enproceso">El servicio de lavander&iacute;a ya ha sido solicitado con el c&oacute;digo no <span></span> y sus prendas han sido recogidas para esta habitaci&oacute;n, el tiempo de espera m&aacute;ximo para sus prendas es de <p id="p_enprocesotiempo"></p>,tan pronto terminemos le notificaremos en la aplicaci&oacute;n y dejaremos sus prendas en su habitaci&oacute;n.</p>
+                <h5 id="titulosContenido">Servicio de Lavander&iacute;a</h5>
+                <p id="p_enproceso" class="clasepadding">El servicio de lavander&iacute;a ya ha sido solicitado con el c&oacute;digo no <b><span></span></b> y sus prendas han sido recogidas para esta habitaci&oacute;n, el tiempo de espera m&aacute;ximo para sus prendas es de <b><span id="p_enprocesotiempo"></span></b>,tan pronto terminemos le notificaremos en la aplicaci&oacute;n y dejaremos sus prendas en su habitaci&oacute;n.</p>
                 <script>var control_lavanderiacodigo = localStorage.getItem("mem_lavanderiacodigo");$("#p_enproceso span").html(control_lavanderiacodigo);var tiempoestimadolavanderia = localStorage.getItem("mem_lavanderiatiempo");$("#p_enprocesotiempo").html(tiempoestimadolavanderia);</script>
             </div>
         </div>
@@ -278,8 +325,8 @@
             <div id="info3">
                 <img src="images/lavanderia.jpg" width="100%" height="auto" alt="...">
 
-                <h2>Servicio de Lavander&iacute;a</h2>
-                <p id="p_finalizado">El servicio de lavander&iacute;a ya ha terminado con la solicitud no. <span></span> , sus prendas estan listas y ser&aacute;n dejadas en su habitaci&oacute;n.</p>
+                <h5 id="titulosContenido">Servicio de Lavander&iacute;a</h5>
+                <p id="p_finalizado" class="clasepadding">El servicio de lavander&iacute;a ya ha terminado con la solicitud no. <span></span> , sus prendas estan listas y ser&aacute;n dejadas en su habitaci&oacute;n.</p>
                 <script>var control_lavanderiacodigo = localStorage.getItem("mem_lavanderiacodigo");$("#p_finalizado span").html(control_lavanderiacodigo);</script>
             </div>
         </div>
@@ -316,17 +363,17 @@
             <div class="container">
             <form  role="form">
                 <div class="checkbox">
-                    <label class="labelTxt"><input class="form-control input-sm" type="checkbox"> Baño</label>
-                    <label class="labelTxt"><input type="checkbox"> Ducha</label>
-                    <label class="labelTxt"><input type="checkbox"> Ventanas</label>
-                    <label class="labelTxt"><input class="form-control input-sm" type="checkbox"> Puerta</label>
-                    <label class="labelTxt"><input type="checkbox"> Luces</label>
-                    <label class="labelTxt"><input type="checkbox"> Otros</label>
+                    <label class="labelTxt"><input id="bano" class="form-control input-sm" type="checkbox"> Baño</label>
+                    <label class="labelTxt"><input id="ducha" type="checkbox"> Ducha</label>
+                    <label class="labelTxt"><input id="ventanas" type="checkbox"> Ventanas</label>
+                    <label class="labelTxt"><input id="puerta" class="form-control input-sm" type="checkbox"> Puerta</label>
+                    <label class="labelTxt"><input id="luces" type="checkbox"> Luces</label>
+                    <label class="labelTxt"><input id="otros" type="checkbox"> Otros</label>
                 </div>
                 <div class="spacer"></div>
                 <label class="txt">Comentarios</label>
-                <textarea class="form-control" rows="3"></textarea>
-                <button type="submit" class="btnCheckIn">
+                <textarea class="form-control" id="comentariostxt" rows="3"></textarea>
+                <button type="submit" onClick="print_lavanderia();" class="btnCheckIn">
                     <span class="checkIn">Solicitar</span>
                 </button>
             </form>
