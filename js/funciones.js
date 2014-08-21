@@ -37,15 +37,15 @@ function print_lavanderia()
 						localStorage.setItem("mem_lavanderiatiempo", tiempoestimadolavanderia);
 						if(estadolavanderia == 'enespera'){
 						console.log("Lavanderia solicitada en espera " + control_lavanderiacodigo);
-						document.location.href = "request.html#lavanderiaenespera";
+						document.location.href = "respuestas.html#lavanderiaenespera";
 														}
 						if(estadolavanderia == 'enproceso'){
 						console.log("Lavanderia solicitada en proceso " + tiempoestimadolavanderia);
-						document.location.href = "request.html#lavanderiaenproceso";
+						document.location.href = "respuestas.html#lavanderiaenproceso";
 														}
 						if(estadolavanderia == 'finalizado'){
 						console.log("Lavanderia finalizada " + control_lavanderiacodigo);
-						document.location.href = "request.html#lavanderiafinalizada";
+						document.location.href = "respuestas.html#lavanderiafinalizada";
 														}																												
 																				
 						
@@ -83,23 +83,31 @@ function handle_lavanderia()
 				   
 }
 
-function handle_amadellaves()
+
+
+function handle_mantenimiento()
 {
- var nombre_amadellaves = localStorage.getItem("nombredb");
- var room_amadellaves = localStorage.getItem("roomdb");
- var amadellaves_llamar = $("#checkboxamadellaves").val();
- var amadellaves_limpieza = $("#flip-1").val();
- var amadellaves_nomolestar = $("#flip-2").val();
+ var nombre_mantenimiento = localStorage.getItem("nombredb");
+ var room_mantenimiento = localStorage.getItem("roomdb");
+ var mantenimiento_bano = $("#bano").val();
+ console.log("man bano: " + mantenimiento_bano);
+ var mantenimiento_ducha = $("#ducha").val();
+ var mantenimiento_ventanas = $("#ventanas").val();
+ var mantenimiento_puerta = $("#puerta").val();
+ var mantenimiento_luces = $("#luces").val();
+ var mantenimiento_otros = $("#otros").val();
+ var mantenimiento_comentariostxt = $("#comentariostxt").val();
+ console.log("man coments: " + mantenimiento_comentariostxt);
  	
- $.get("http://190.145.24.146/app/amadellaves.php",{room: room_amadellaves, nombre: nombre_amadellaves, llamar: amadellaves_llamar, limpieza: amadellaves_limpieza, nomolestar: amadellaves_nomolestar}, amadellavesres, "jsonp");
+ $.get("http://190.145.24.146/app/mantenimiento.php",{room: room_mantenimiento, nombre: nombre_mantenimiento, bano: mantenimiento_bano, comentariostxt: mantenimiento_comentariostxt}, amadellavesres, "jsonp");
+ console.log("Envieget Man: " + mantenimiento_puerta);
  
- function amadellavesres(respuesta){
-				        var amadellaves_codigosolicitud = respuesta.codigosolicitud;
-                                              localStorage.setItem("mem_amadellavescodigo", amadellaves_codigosolicitud);
-						console.log("Se envio solicitud de ama de llaves: " + amadellaves_codigosolicitud);
+ function amadellavesres(respuestaa){
+				        var amadellaves_codigosolicitud = respuestaa.codigosolicitud;
+                                              localStorage.setItem("mem_mantenimientocodigo", amadellaves_codigosolicitud);
+						console.log("Se envio solicitud de mantenimiento: " + amadellaves_codigosolicitud);
 						}
-						document.location.href = "request.html#solicitudenviada";
-				
+						document.location.href = "respuestas.html#res_mantenimiento";
 				   
 }
 
